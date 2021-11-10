@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="https://test.inquiry/"
+           targetNamespace="https://test.inquiry/" >
+
+    <xs:element name="tools.inquiry">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TransactionID" type="xs:string"/>
+                <xs:element name="ChannelID" type="xs:string"/>
+                <xs:element name="TerminalID" type="xs:string"/>
+                <xs:element name="TransactionDate" type="xs:string"/>
+                <xs:element name="CompanyCode" type="xs:string"/>
+                <xs:element name="CustomerKey1" type="xs:string"/>
+                <xs:element name="CustomerKey2" type="xs:string"/>
+                <xs:element name="CustomerKey3" type="xs:string"/>
+                <xs:element name="AdditionalData1" type="xs:string"/>
+                <xs:element name="AdditionalData2" type="xs:string"/>
+                <xs:element name="AdditionalData3" type="xs:string"/>
+                <xs:element name="AdditionalData4" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="tools.inquiryResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return" type="tns:inq"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="inq">
+        <xs:sequence>
+            <xs:element name="TransactionID" type="xs:string"/>
+            <xs:element name="ChannelID" type="xs:string"/>
+            <xs:element name="TerminalID" type="xs:string"/>
+            <xs:element name="TransactionDate" type="xs:string"/>
+            <xs:element name="CompanyCode" type="xs:string"/>
+            <xs:element name="CustomerKey1" type="xs:string"/>
+            <xs:element name="CustomerKey2" type="xs:string"/>
+            <xs:element name="CustomerKey3" type="xs:string"/>
+            <xs:element name="AdditionalData1" type="xs:string"/>
+            <xs:element name="AdditionalData2" type="xs:string"/>
+            <xs:element name="AdditionalData3" type="xs:string"/>
+            <xs:element name="AdditionalData4" type="xs:string"/>
+            <xs:element name="BillDetail" type="xs:string"/>
+            <xs:element name="Currency" type="xs:string"/>
+            <xs:element name="Amount" type="xs:string"/>
+            <xs:element name="Fee" type="xs:string"/>
+            <xs:element name="PaidAmount" type="xs:string"/>
+            <xs:element name="CustomerName" type="xs:string"/>
+            <xs:element name="FlagPayment" type="xs:string"/>
+            <xs:element name="ResponseCode" type="xs:string"/>
+            <xs:element name="ResponseDescription" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
